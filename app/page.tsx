@@ -4,7 +4,7 @@ import React, { Suspense, useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 
 // Carrega o componente 3D apenas no navegador do cliente (evita erros no build da Vercel)
-const CanvasContent = dynamic(() => import('@/components/AvatarViewer'), {
+const CanvasContent = dynamic(() => import('./AvatarViewer'), {
   ssr: false,
   loading: () => (
     <div className="flex h-full w-full items-center justify-center text-slate-400">
